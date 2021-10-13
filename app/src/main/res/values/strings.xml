@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Формулы</string>
+    <string name="btn_find">Find</string>
+    <string name="et_enter_name_of_form">Введите название формулы</string>
+    <string name="btn_back">В главное меню</string>
+    <string name="btn_5">5-ый класс</string>
+    <string name="btn_6">6-ый класс</string>
+    <string name="btn_7">7-ый класс</string>
+    <string name="btn_8">8-ый класс</string>
+    <string name="btn_9">9-ый класс</string>
+    <string name="btn_10">10-ый класс</string>
+    <string name="btn_11">11-ый класс</string>
+</resources>
