@@ -11,17 +11,13 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.formulas.DB.DBFunc
-import com.example.formulas.DB.DB_Info
 import com.example.formulas.MainActivity
 import com.example.formulas.R
-import com.example.formulas.rec_view_adapter.Check_Adapter
 import com.example.formulas.rec_view_adapter.InfoAdapter
-
 
 class Classes: Activity() {
     private var znach:Int?=0
     val dbFunc = DBFunc(this)
-    var db: SQLiteDatabase? = null
     companion object {
         const val TOTAL_COUNT = "total_count"
     }
@@ -80,5 +76,4 @@ class Classes: Activity() {
         super.onDestroy()
         dbFunc.closeDB()
     }
-
 }
