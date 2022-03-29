@@ -7,9 +7,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/grad"
-    tools:context=".classes.Classes"
+    tools:context=".addformulas.classes.Classes"
     >
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:layout_constraintVertical_bias="0"
+        tools:listitem="@layout/adapter" />
     <ImageButton
         android:focusable="true"
         android:id="@+id/find"
@@ -24,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <EditText
+    <TextView
         android:id="@+id/editText"
 
         android:importantForAutofill="no"
@@ -33,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:hint="@string/et_enter_name_of_form"
+
         android:minHeight="48dp"
         app:layout_constraintEnd_toStartOf="@+id/find"
         app:layout_constraintHorizontal_bias="1.0"
@@ -53,18 +66,5 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_back"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0"
-        tools:listitem="@layout/adapter" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
