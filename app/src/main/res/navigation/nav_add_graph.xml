@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_add_graph"
+    app:startDestination="@+id/add_formulas">
+
+    <fragment
+        android:id="@+id/add_formulas"
+        android:name="com.example.formulas.addformulas.mvvm.presentation.ui.AddFormulasFragment"
+        android:label="Страница добавления формул"
+        tools:layout="@layout/addformulas">
+    </fragment>
+
+    <fragment
+        android:id="@+id/add_themes"
+        android:name="com.example.formulas.addformulas.mvvm.presentation.ui.AddThemesFragment"
+        android:label="Страница добавления тем"
+        tools:layout="@layout/addthemes"
+        />
+</navigation>

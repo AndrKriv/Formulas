@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/nav_graph"
+app:startDestination="@+id/navigationStart">
+
+    <fragment
+        android:id="@+id/navigationStart"
+        android:name="com.example.formulas.showformulas.mvvm.presentation.ui.StartFragment"
+        android:label="Страница формул"
+        tools:layout="@layout/fragment_start">
+    <action
+        android:id="@+id/action_start_to_info"
+        app:destination="@id/navigationInfo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationInfo"
+        android:name="com.example.formulas.showformulas.mvvm.presentation.ui.InfoFragment"
+        android:label="Запуск"
+        tools:layout="@layout/fragment_info"
+        />
+
+</navigation>
