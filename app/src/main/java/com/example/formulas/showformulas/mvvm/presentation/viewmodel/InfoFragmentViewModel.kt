@@ -1,4 +1,8 @@
 package com.example.formulas.showformulas.mvvm.presentation.viewmodel
 
-class InfoFragmentViewModel {
+import androidx.lifecycle.ViewModel
+
+class InfoFragmentViewModel : ViewModel() {
+
+
 }

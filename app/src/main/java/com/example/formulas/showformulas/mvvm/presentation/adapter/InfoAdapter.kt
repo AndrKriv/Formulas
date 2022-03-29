@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.formulas.databinding.InfoItemBinding
 import com.example.formulas.showformulas.mvvm.core.Formulas
 
-class ForecastViewHolder (
+class ForecastViewHolder(
     private val binding: InfoItemBinding
     //,private val api: ApiService
 ) :
@@ -15,8 +15,8 @@ class ForecastViewHolder (
 
     fun bindView(item: Formulas) {
         with(binding) {
-            nameOfFormula.text = item.nameOfFormula
-            formula.text = item.formula
+            infoItemNameOfFormula.text = item.nameOfFormula
+            infoItemFormula.text = item.formula
         }
     }
 }

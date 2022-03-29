@@ -5,7 +5,7 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/name_of_formula"
+        android:id="@+id/infoItemNameOfFormula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/top_margin"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/formula"
+        android:id="@+id/infoItemFormula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/horizontal_margin"
@@ -26,6 +26,6 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name_of_formula" />
+        app:layout_constraintTop_toBottomOf="@id/infoItemNameOfFormula" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

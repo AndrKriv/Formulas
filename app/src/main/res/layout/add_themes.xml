@@ -8,7 +8,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/add_name_of_formula"
+        android:id="@+id/addThemesNameOfFormula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/enter_name"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/add_add"
+        android:id="@+id/addThemesAddBtn"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="28dp"
@@ -28,11 +28,11 @@
         android:textColor="@color/top_red"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintTop_toBottomOf="@+id/add_name_of_formula"
+        app:layout_constraintTop_toBottomOf="@+id/addThemesNameOfFormula"
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:id="@+id/add_delete"
+        android:id="@+id/addThemesDeleteBtn"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="29dp"
@@ -46,10 +46,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_add" />
+        app:layout_constraintTop_toBottomOf="@+id/addThemesAddBtn" />
 
     <TextView
-        android:id="@+id/show_names"
+        android:id="@+id/addThemesShowNamesOfFormula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -59,6 +59,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_delete" />
+        app:layout_constraintTop_toBottomOf="@+id/addThemesDeleteBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

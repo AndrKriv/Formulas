@@ -25,14 +25,14 @@ class StartFragment : Fragment(R.layout.fragment_start){
             android.R.layout.simple_spinner_item
         ).also { adapter ->
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-            binding.classesSpinner.adapter = adapter
+            binding.startClassesSpinner.adapter = adapter
         }
 
-        binding.classesSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
+        binding.startClassesSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>, view: View?, position: Int, id: Long) {
                 val classNumber = checkClassNumber(myArray[position])
                 Log.e("AAA1",classNumber.toString())
-                binding.openBtn.setOnClickListener {
+                binding.startOpenBtn.setOnClickListener {
                     changeFragment()
                     sendNumber(classNumber)
                 }
@@ -48,19 +48,19 @@ class StartFragment : Fragment(R.layout.fragment_start){
     private fun changeFragment(){
         fragmentManager
             ?.beginTransaction()
-            ?.replace(R.id.nav_host_fragment, InfoFragment())
+            ?.replace(R.id.navHostFragment, InfoFragment())
             ?.addToBackStack(InfoFragment().tag)
             ?.commit()
     }
 
     fun checkClassNumber(string: String):Int = when(string){
-        "5-ый класс"->5
-        "6-ой класс"->6
-        "7-ой класс"->7
-        "8-ой класс"->8
-        "9-ый класс"->9
-        "10-ый класс"->10
-        "11-ый класс"->11
+        getString(R.string.btn_5)->5
+        getString(R.string.btn_6)->6
+        getString(R.string.btn_7)->7
+        getString(R.string.btn_8)->8
+        getString(R.string.btn_9)->9
+        getString(R.string.btn_10)->10
+        getString(R.string.btn_11)->11
         else -> 0
     }
 }

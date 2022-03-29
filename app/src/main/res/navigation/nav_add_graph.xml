@@ -2,20 +2,20 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_add_graph"
-    app:startDestination="@+id/add_formulas">
+    android:id="@+id/navAddGraph"
+    app:startDestination="@+id/addFormulas">
 
     <fragment
-        android:id="@+id/add_formulas"
+        android:id="@+id/addFormulas"
         android:name="com.example.formulas.addformulas.mvvm.presentation.ui.AddFormulasFragment"
         android:label="Страница добавления формул"
-        tools:layout="@layout/addformulas">
+        tools:layout="@layout/add_formulas">
     </fragment>
 
     <fragment
-        android:id="@+id/add_themes"
+        android:id="@+id/addThemes"
         android:name="com.example.formulas.addformulas.mvvm.presentation.ui.AddThemesFragment"
         android:label="Страница добавления тем"
-        tools:layout="@layout/addthemes"
+        tools:layout="@layout/add_themes"
         />
 </navigation>
