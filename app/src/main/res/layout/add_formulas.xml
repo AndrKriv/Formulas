@@ -4,53 +4,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:id="@+id/add_formulas"
+    android:id="@+id/addFormulas"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/add_name_of_formula"
+        android:id="@+id/addThemesNameOfFormula"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="Введите название формулы"
-        app:layout_constraintEnd_toEndOf="@+id/add_class"
+        android:hint="@string/entername"
+        app:layout_constraintEnd_toEndOf="@+id/addClassNumber"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/add_class"
-        app:layout_constraintTop_toBottomOf="@+id/add_class" />
+        app:layout_constraintStart_toStartOf="@+id/addClassNumber"
+        app:layout_constraintTop_toBottomOf="@+id/addClassNumber" />
 
     <EditText
-        android:id="@+id/add_formula"
+        android:id="@+id/addFormula"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:hint="Введите формулу"
-        app:layout_constraintEnd_toEndOf="@+id/add_name_of_formula"
-        app:layout_constraintStart_toStartOf="@+id/add_name_of_formula"
-        app:layout_constraintTop_toBottomOf="@+id/add_name_of_formula" />
+        android:hint="@string/enterformula"
+        app:layout_constraintEnd_toEndOf="@+id/addThemesNameOfFormula"
+        app:layout_constraintStart_toStartOf="@+id/addThemesNameOfFormula"
+        app:layout_constraintTop_toBottomOf="@+id/addThemesNameOfFormula" />
 
     <Button
-        android:id="@+id/add_add"
+        android:id="@+id/addThemesAddBtn"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="28dp"
         android:background="@null"
-        android:text="Добавить"
+        android:text="@string/add"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/top_red"
         android:textSize="24sp"
         android:textStyle="italic"
-        app:layout_constraintTop_toBottomOf="@+id/add_formula"
+        app:layout_constraintTop_toBottomOf="@+id/addFormula"
         tools:layout_editor_absoluteX="0dp" />
 
     <Button
-        android:id="@+id/add_delete"
+        android:id="@+id/addThemesDeleteBtn"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="29dp"
         android:background="@null"
-        android:text="Удалить"
+        android:text="@string/delete"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/top_red"
@@ -59,10 +59,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_add" />
+        app:layout_constraintTop_toBottomOf="@+id/addThemesAddBtn" />
 
     <TextView
-        android:id="@+id/tv_show"
+        android:id="@+id/addShowFormula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -72,17 +72,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_delete" />
+        app:layout_constraintTop_toBottomOf="@+id/addThemesDeleteBtn" />
 
     <EditText
-        android:id="@+id/add_class"
-        android:layout_width="0dp"
+        android:id="@+id/addClassNumber"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:ems="10"
-        android:hint="Введите номер класса"
+        android:hint="@string/enterclassnumber"
         android:inputType="numberSigned"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"

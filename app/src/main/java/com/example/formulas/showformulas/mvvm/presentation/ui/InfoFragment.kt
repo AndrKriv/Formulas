@@ -16,23 +16,22 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.forecastRecyclerView.adapter = InfoAdapter()
-        Log.d("AAA","Это есть Info")
+        binding.infoRecyclerView.adapter = InfoAdapter()
 
         setFragmentResultListener("requestKey") { _, bundle ->
             val res = bundle.getString("key")
-            Log.d("AAA",res.toString())
+            Log.d("AAA", res.toString())
         }
 
-        binding.btnBack.setOnClickListener {
+        binding.infoBackBtn.setOnClickListener {
             changeFragment()
         }
     }
 
-    private fun changeFragment(){
+    private fun changeFragment() {
         fragmentManager
             ?.beginTransaction()
-            ?.replace(R.id.nav_host_fragment, StartFragment())
+            ?.replace(R.id.navHostFragment, StartFragment())
             ?.addToBackStack(StartFragment().tag)
             ?.commit()
     }

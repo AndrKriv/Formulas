@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragment_start"
+    android:id="@+id/fragmentStart"
     android:orientation="vertical">
 
     <Spinner
-        android:id="@+id/classes_spinner"
+        android:id="@+id/startClassesSpinner"
         android:layout_width="match_parent"
         android:layout_height="@dimen/button_size"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,10 +21,10 @@
         android:layout_height="@dimen/button_size"
         android:layout_marginTop="@dimen/top_margin"
         android:text="@string/open"
-        android:id="@+id/open_btn"
+        android:id="@+id/startOpenBtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classes_spinner" />
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

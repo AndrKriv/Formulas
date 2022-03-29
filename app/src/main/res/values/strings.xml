@@ -23,5 +23,8 @@
     <string name="enter_name">Введите название формулы</string>
     <string name="add">Добавить</string>
     <string name="delete">Удалить</string>
+    <string name="entername">Введите название формулы</string>
+    <string name="enterformula">Введите формулу</string>
+    <string name="enterclassnumber">Введите номер класса</string>
 
 </resources>

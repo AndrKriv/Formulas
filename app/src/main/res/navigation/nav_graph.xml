@@ -10,9 +10,6 @@ app:startDestination="@+id/navigationStart">
         android:name="com.example.formulas.showformulas.mvvm.presentation.ui.StartFragment"
         android:label="Страница формул"
         tools:layout="@layout/fragment_start">
-    <action
-        android:id="@+id/action_start_to_info"
-        app:destination="@id/navigationInfo" />
     </fragment>
 
     <fragment
