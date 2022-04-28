@@ -1,10 +1,11 @@
-package com.example.formulas.addformulas
+package com.example.formulas.addformulas.mvvm.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import com.example.formulas.R
 import com.example.formulas.databinding.ActivityAddBinding
+import com.example.formulas.di.app.App
 
 class AddActivity : AppCompatActivity() {
 
@@ -18,5 +19,9 @@ class AddActivity : AppCompatActivity() {
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.navAddFragment) as NavHostFragment
         val navController = navHostFragment.navController
+
+        (applicationContext as App)
+            .appComponent
+            .inject(this)
     }
 }

@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navAddGraph"
-    app:startDestination="@+id/addFormulas">
+    app:startDestination="@+id/addThemes">
+    <!--app:startDestination="@+id/addFormulas"-->
+
 
     <fragment
         android:id="@+id/addFormulas"

@@ -1,4 +1,4 @@
-package com.example.formulas
+package com.example.formulas.util
 
 import android.view.View
 import androidx.fragment.app.Fragment
