@@ -8,8 +8,8 @@
         android:id="@+id/infoItemNameOfFormula"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/top_margin"
         android:layout_marginHorizontal="@dimen/horizontal_margin"
+        android:layout_marginTop="@dimen/top_margin"
 
         android:textColor="#339966"
         android:textSize="16sp"
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <com.taeim.mathdisplay.AndroidMathView
         android:id="@+id/infoItemFormula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -27,5 +27,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/infoItemNameOfFormula" />
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/infoItemFormula"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="@dimen/horizontal_margin"-->
+    <!--        android:textColor="@color/black"-->
+    <!--        android:textSize="16sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/infoItemNameOfFormula" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

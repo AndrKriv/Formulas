@@ -5,25 +5,24 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.formulas.databinding.InfoItemBinding
-import com.example.formulas.showformulas.mvvm.core.Formulas
+import com.example.formulas.showformulas.mvvm.core.InfoModel
 
 class ForecastViewHolder(
     private val binding: InfoItemBinding
-    //,private val api: ApiService
 ) :
     RecyclerView.ViewHolder(binding.root) {
 
-    fun bindView(item: Formulas) {
+    fun bindView(item: InfoModel) {
         with(binding) {
             infoItemNameOfFormula.text = item.nameOfFormula
-            infoItemFormula.text = item.formula
+            infoItemFormula.latex = item.formula
         }
     }
 }
 
 class InfoAdapter : RecyclerView.Adapter<ForecastViewHolder>() {
 
-    private val items = mutableListOf<Formulas>()
+    private val items = mutableListOf<InfoModel>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForecastViewHolder =
         ForecastViewHolder(
@@ -40,7 +39,7 @@ class InfoAdapter : RecyclerView.Adapter<ForecastViewHolder>() {
     override fun getItemCount() = items.size
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setItems(items: List<Formulas>) {
+    fun setItems(items: List<InfoModel>) {
         this.items.clear()
         this.items.addAll(items)
         notifyDataSetChanged()

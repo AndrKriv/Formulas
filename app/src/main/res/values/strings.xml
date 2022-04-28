@@ -20,11 +20,11 @@
     <string name="btn_10">10-ый класс</string>
     <string name="btn_11">11-ый класс</string>
     <string name="open">Открыть класс</string>
-    <string name="enter_name">Введите название формулы</string>
+    <string name="theme_name">Введите название темы</string>
     <string name="add">Добавить</string>
     <string name="delete">Удалить</string>
-    <string name="entername">Введите название формулы</string>
-    <string name="enterformula">Введите формулу</string>
+    <string name="formula_name">Введите название формулы</string>
+    <string name="enter_formula">Введите формулу</string>
     <string name="enterclassnumber">Введите номер класса</string>
 
 </resources>
