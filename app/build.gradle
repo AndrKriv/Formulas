@@ -16,7 +16,14 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
     }
+
+
     buildFeatures {
         viewBinding = true
     }
@@ -79,7 +86,9 @@ dependencies {
     kapt "androidx.room:room-compiler:$roomVersion"
 
     //Math
-    //implementation 'com.github.jstarczewski:MathView:0.4.0'
     implementation 'com.github.javafa:AndroidMathView:1.0.21'
-    //implementation 'com.github.derysudrajat:math-view:1.0.1'
+
+    //animation
+    implementation "com.airbnb.android:lottie:4.1.0"
+    implementation 'androidx.core:core-splashscreen:1.0.0-beta02'
 }

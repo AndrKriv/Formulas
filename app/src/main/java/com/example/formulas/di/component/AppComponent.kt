@@ -1,7 +1,6 @@
 package com.example.formulas.di.component
 
-import android.app.Application
-import com.example.formulas.showformulas.mvvm.presentation.MainActivity
+import android.content.Context
 import com.example.formulas.addformulas.mvvm.presentation.AddActivity
 import com.example.formulas.addformulas.mvvm.presentation.ui.AddFormulasFragment
 import com.example.formulas.addformulas.mvvm.presentation.ui.AddThemesFragment
@@ -9,7 +8,9 @@ import com.example.formulas.di.app.App
 import com.example.formulas.di.module.DatabaseModule
 import com.example.formulas.di.module.ViewModelFactoryModule
 import com.example.formulas.di.module.ViewModelsModule
+import com.example.formulas.showformulas.mvvm.presentation.MainActivity
 import com.example.formulas.showformulas.mvvm.presentation.ui.InfoFragment
+import com.example.formulas.showformulas.mvvm.presentation.ui.PasswordFragment
 import com.example.formulas.showformulas.mvvm.presentation.ui.StartFragment
 import dagger.BindsInstance
 import dagger.Component
@@ -29,17 +30,17 @@ interface AppComponent {
     interface Builder {
 
         @BindsInstance
-        fun application(application: Application): Builder
+        fun application(context: Context): Builder
 
         fun build(): AppComponent
     }
 
     fun inject(startFragment: StartFragment)
     fun inject(infoFragment: InfoFragment)
+    fun inject(passwordFragment: PasswordFragment)
     fun inject(mainActivity: MainActivity)
     fun inject(app: App)
-    fun inject(app: AddFormulasFragment)
-    fun inject(app: AddThemesFragment)
-    fun inject(bottomActivity: AddActivity)
-
+    fun inject(addFormulasFragment: AddFormulasFragment)
+    fun inject(addThemesFragment: AddThemesFragment)
+    fun inject(addActivity: AddActivity)
 }

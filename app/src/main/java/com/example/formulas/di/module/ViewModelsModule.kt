@@ -4,8 +4,8 @@ import androidx.lifecycle.ViewModel
 import com.example.formulas.addformulas.mvvm.presentation.viewmodel.AddFormulasViewModel
 import com.example.formulas.addformulas.mvvm.presentation.viewmodel.AddThemesViewModel
 import com.example.formulas.showformulas.mvvm.presentation.viewmodel.InfoViewModel
-import com.example.formulas.showformulas.mvvm.presentation.viewmodel.StartViewModel
 import com.example.formulas.di.key.ViewModelKey
+import com.example.formulas.showformulas.mvvm.presentation.viewmodel.PasswordViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
@@ -20,8 +20,8 @@ abstract class ViewModelsModule {
 
     @IntoMap
     @Binds
-    @ViewModelKey(StartViewModel::class)
-    abstract fun bindStartViewModel(startViewModel: StartViewModel): ViewModel
+    @ViewModelKey(PasswordViewModel::class)
+    abstract fun bindPasswordVM(passwordViewModel: PasswordViewModel): ViewModel
 
     @IntoMap
     @Binds

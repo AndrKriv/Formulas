@@ -16,7 +16,7 @@ import com.example.formulas.database.model.ThemesEntity
         ThemesEntity::class
     ],
     version = 1,
-    exportSchema = true
+    exportSchema = false
 )
 abstract class FormulasDatabase : RoomDatabase() {
 

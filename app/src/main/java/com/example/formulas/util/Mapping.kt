@@ -1,24 +1,25 @@
-package com.example.formulas
+package com.example.formulas.util
 
-import com.example.formulas.addformulas.model.FormulasUIModel
 import com.example.formulas.database.model.ClassNumberEntity
 import com.example.formulas.database.model.FormulasEntity
 import com.example.formulas.database.model.ThemesEntity
-import com.example.formulas.showformulas.mvvm.core.InfoModel
+import com.example.formulas.showformulas.mvvm.model.FormulasUIModel
+import com.example.formulas.showformulas.mvvm.model.StartUIModel
 
-fun FormulasEntity.fromEntityToInfoModel(): InfoModel {
-    return InfoModel(
-        nameOfFormula = nameOf,
+fun FormulasEntity.toFormulasUIModel(): FormulasUIModel =
+    FormulasUIModel(
+        classNumber = classNumber,
+        nameOfFormula = nameOfFormula,
         formula = formula,
-        classNumber = classNumber
+        theme = themeOfFormulas,
+        note = "Примечание: $noteOfFormula"
     )
-}
 
-fun List<FormulasEntity>.fromEntityToInfoModelList(): List<InfoModel> {
+fun List<FormulasEntity>.fromEntityToInfoModelList(): List<FormulasUIModel> {
 
-    val list = mutableListOf<InfoModel>()
+    val list = mutableListOf<FormulasUIModel>()
     for (value in this) {
-        list.add(value.fromEntityToInfoModel())
+        list.add(value.toFormulasUIModel())
     }
     return list
 }
@@ -43,18 +44,16 @@ fun List<ClassNumberEntity>.fromClassesEntityListToClassesString(): String {
     return classesString
 }
 
-fun FormulasUIModel.toFormulasEntity(): FormulasEntity =
-    FormulasEntity(
-        classNumber = classNumber,
-        nameOf = nameOf,
-        formula = formula,
-        theme = theme
+fun String.toStartUIModel(): StartUIModel =
+    StartUIModel(
+        classNumber = this
     )
 
-fun FormulasEntity.toFormulasUIModel(): FormulasUIModel =
-    FormulasUIModel(
-        classNumber = classNumber,
-        nameOf = nameOf,
-        formula = formula,
-        theme = theme
-    )
+fun Array<String>.fromStringToStartUIModelList(): List<StartUIModel> {
+
+    val list = mutableListOf<StartUIModel>()
+    for (value in this) {
+        list.add(value.toStartUIModel())
+    }
+    return list
+}

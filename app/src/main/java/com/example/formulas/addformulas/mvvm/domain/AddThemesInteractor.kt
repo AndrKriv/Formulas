@@ -2,7 +2,7 @@ package com.example.formulas.addformulas.mvvm.domain
 
 import com.example.formulas.database.dao.ThemesDao
 import com.example.formulas.database.model.ThemesEntity
-import com.example.formulas.fromThemesEntityListToThemesString
+import com.example.formulas.util.fromThemesEntityListToThemesString
 import io.reactivex.Completable
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers

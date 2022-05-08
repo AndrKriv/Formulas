@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#FCEAD519</color>
     <color name="top_red">#B00020</color>
+    <color name="lime"> #FDE910</color>
+    <color name="seashell"> #FFF5EE</color>
+    <color name="neutral"> #99CCCC</color>
 </resources>
