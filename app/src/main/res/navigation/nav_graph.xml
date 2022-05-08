@@ -10,11 +10,21 @@ app:startDestination="@+id/navigationStart">
         android:name="com.example.formulas.showformulas.mvvm.presentation.ui.StartFragment"
         android:label="Страница формул"
         tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_navigationStart_to_passwordFromStartToAdd"
+            app:destination="@id/passwordFromStartToAdd" />
     </fragment>
 
     <fragment
         android:id="@+id/navigationInfo"
         android:name="com.example.formulas.showformulas.mvvm.presentation.ui.InfoFragment"
+        android:label="Запуск"
+        tools:layout="@layout/fragment_info"
+        />
+
+    <fragment
+        android:id="@+id/passwordFromStartToAdd"
+        android:name="com.example.formulas.showformulas.mvvm.presentation.ui.PasswordFragment"
         android:label="Запуск"
         tools:layout="@layout/fragment_info"
         />

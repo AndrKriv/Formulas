@@ -4,20 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navAddGraph"
     app:startDestination="@+id/addThemes">
-    <!--app:startDestination="@+id/addFormulas"-->
-
 
     <fragment
         android:id="@+id/addFormulas"
         android:name="com.example.formulas.addformulas.mvvm.presentation.ui.AddFormulasFragment"
         android:label="Страница добавления формул"
-        tools:layout="@layout/add_formulas">
-    </fragment>
+        tools:layout="@layout/add_formulas" />
 
     <fragment
         android:id="@+id/addThemes"
         android:name="com.example.formulas.addformulas.mvvm.presentation.ui.AddThemesFragment"
         android:label="Страница добавления тем"
-        tools:layout="@layout/add_themes"
-        />
+        tools:layout="@layout/add_themes">
+    </fragment>
 </navigation>

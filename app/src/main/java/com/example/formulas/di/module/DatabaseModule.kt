@@ -1,6 +1,6 @@
 package com.example.formulas.di.module
 
-import android.app.Application
+import android.content.Context
 import androidx.room.Room
 import com.example.formulas.database.dao.ClassesDao
 import com.example.formulas.database.dao.FormulasDao
@@ -31,13 +31,13 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun providesDatabase(application: Application): FormulasDatabase =
+    fun providesDatabase(context: Context): FormulasDatabase =
         Room
             .databaseBuilder(
-                application.applicationContext,
+                context.applicationContext,
                 FormulasDatabase::class.java,
                 Constants.DATABASE_NAME
             )
-            //.createFromAssets()
+            .createFromAsset("formulas.db")
             .build()
 }

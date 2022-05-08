@@ -1,29 +1,30 @@
 package com.example.formulas.showformulas.mvvm.domain
 
 import com.example.formulas.database.dao.FormulasDao
-import com.example.formulas.database.model.ClassNumbWithFormulas
-import com.example.formulas.database.model.FormulasEntity
-import com.example.formulas.fromEntityToInfoModelList
-import com.example.formulas.showformulas.mvvm.core.InfoModel
+import com.example.formulas.showformulas.mvvm.model.FormulasUIModel
+import com.example.formulas.util.fromEntityToInfoModelList
 import io.reactivex.Single
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 class FormulasInteractor @Inject constructor(
     private val formulasDao: FormulasDao
 ) {
-    fun insertData(formulasEntity: FormulasEntity) =
-        formulasDao.insertData(formulasEntity)
-
-    fun insertDataList(list: List<FormulasEntity>) {
-        for (i in list) {
-            insertData(i)
-        }
-    }
-
-    fun getFormulasByClass(classNumb: Int): Single<List<FormulasEntity>> =
+    fun getFormulasByClass(classNumb: Int): Single<List<FormulasUIModel>> =
         formulasDao
             .getFormulasByClass(classNumb)
+            .filter { it.isNotEmpty() }
+            .toSingle()
+            .map { formulas ->
+                formulas.fromEntityToInfoModelList()
+            }
+            .subscribeOn(Schedulers.io())
+            .observeOn(AndroidSchedulers.mainThread())
 
-//    private fun deleteData(themesEntity: ThemesEntity) =
-//        formulasDao.deleteTheme(themesEntity)
+//    fun insertFormulas(formulasEntity: FormulasEntity): Completable =
+//        formulasDao
+//            .insertData(formulasEntity)
+//            .subscribeOn(Schedulers.io())
+//            .observeOn(AndroidSchedulers.mainThread())
 }

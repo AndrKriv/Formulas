@@ -26,5 +26,9 @@
     <string name="formula_name">Введите название формулы</string>
     <string name="enter_formula">Введите формулу</string>
     <string name="enterclassnumber">Введите номер класса</string>
-
+    <string name="formula">Formula</string>
+    <string name="theme">Theme</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
