@@ -6,10 +6,10 @@ import android.widget.Toast
 import androidx.fragment.app.viewModels
 import com.example.formulas.R
 import com.example.formulas.addformulas.mvvm.presentation.viewmodel.AddThemesViewModel
+import com.example.formulas.app.App
+import com.example.formulas.core.BaseFragment
 import com.example.formulas.databinding.AddThemesBinding
-import com.example.formulas.di.app.App
-import com.example.formulas.showformulas.mvvm.presentation.ui.BaseFragment
-import com.example.formulas.util.viewBinding
+import com.example.formulas.extension.viewBinding
 
 class AddThemesFragment : BaseFragment(R.layout.add_themes) {
 

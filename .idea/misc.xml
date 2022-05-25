@@ -13,7 +13,9 @@
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.203125" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/drawable/ic_formula_24dp.xml" value="0.203125" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.203125" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/drawable/ic_question.xml" value="0.28615384615384615" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/drawable/ic_theme_24dp.xml" value="0.27076923076923076" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/drawable/item_selector.xml" value="0.203125" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout-land/fragment_start.xml" value="0.15299823633156967" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/activity_add.xml" value="0.240625" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/activity_adde.xml" value="0.18697916666666667" />
@@ -22,20 +24,27 @@
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/adapter.xml" value="0.19322916666666667" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/add.xml" value="0.14375" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/add_classes.xml" value="0.165625" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/add_data.xml" value="0.2259963768115942" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/add_formula.xml" value="0.2296875" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/add_formulas.xml" value="0.1" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/add_themes.xml" value="0.16875" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/addformulas.xml" value="0.11702127659574468" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/addthemes.xml" value="0.240625" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/class_item.xml" value="0.18795289855072464" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/classes.xml" value="0.14375" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_class.xml" value="0.14375" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_dashboard.xml" value="0.18697916666666667" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_home.xml" value="0.18697916666666667" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_info.xml" value="0.18541666666666667" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_notifications.xml" value="0.18697916666666667" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_pass.xml" value="0.1640625" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_separation.xml" value="0.19384057971014493" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_start.xml" value="0.1921875" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/fragment_theme.xml" value="0.14375" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/info_item.xml" value="0.18541666666666667" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/math_example.xml" value="0.10371376811594203" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/start_item.xml" value="0.1644021739130435" />
+        <entry key="..\:/Diploma projects/Formulas/app/src/main/res/layout/theme_item.xml" value="0.18795289855072464" />
         <entry key="..\:/Diploma projects/Formulas/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/proj/Formulas/app/src/main/res/layout/activity_main.xml" value="0.14114583333333333" />
         <entry key="..\:/proj/Formulas/app/src/main/res/layout/classes.xml" value="0.14114583333333333" />

@@ -2,29 +2,32 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragmentStart"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/fragmentStart"
     android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/startRecyclerButtons"
+    <Button
+        android:id="@+id/byClasses"
+        android:text="По классам"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/start_item"/>
+        app:layout_constraintVertical_chainStyle="spread" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/byThemes"
+        android:text="По темам"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/startFABAddFormula"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="18dp"
-        android:src="@drawable/ic_add"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/byClasses" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

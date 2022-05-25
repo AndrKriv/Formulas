@@ -2,7 +2,7 @@ package com.example.formulas.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.formulas.ViewModelFactory
+import com.example.formulas.core.ViewModelFactory
 import dagger.Module
 import dagger.Provides
 import javax.inject.Provider
