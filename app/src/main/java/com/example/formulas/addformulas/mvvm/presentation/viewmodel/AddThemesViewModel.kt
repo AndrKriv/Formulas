@@ -3,8 +3,8 @@ package com.example.formulas.addformulas.mvvm.presentation.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.formulas.addformulas.mvvm.domain.AddThemesInteractor
-import com.example.formulas.showformulas.mvvm.presentation.viewmodel.BaseViewModel
-import com.example.formulas.util.SingleLiveEvent
+import com.example.formulas.core.BaseViewModel
+import com.example.formulas.core.SingleLiveEvent
 import javax.inject.Inject
 
 class AddThemesViewModel @Inject constructor(

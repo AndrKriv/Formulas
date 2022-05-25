@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="@color/teal_200"
+    tools:context=".addformulas.mvvm.presentation.ui.AddFormulasFragment">
+
+    <com.taeim.mathdisplay.AndroidMathView
+        android:id="@+id/formulaMathViewFormula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:clickable="true"
+        android:foregroundTint="#009688"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:autoSize="true"
+        app:fontColor="@color/black"
+        app:fontSize="?attr/dialogPreferredPadding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:textAlignment="center" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/formulaSwitchForElemForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:minHeight="48dp"
+        android:text="Для элем./форм."
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaMathViewFormula" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/formulaSwitchChangeHighLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:minHeight="48dp"
+        android:text="Поменять местами"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaMathViewFormula" />
+
+    <Button
+        android:id="@+id/formulaCleanMathViewFormula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/teal_200"
+        android:text="Очистить"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaSwitchForElemForm" />
+
+    <Button
+        android:id="@+id/formulaSaveFormulasData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/teal_200"
+        android:text="Сохранить"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaSwitchChangeHighLow" />
+
+    <EditText
+        android:id="@+id/formulaNameOfFormula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Введите название формулы"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaCleanMathViewFormula" />
+
+    <Spinner
+        android:id="@+id/formulaThemesSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaNameOfFormula"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/formulaClassesSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaThemesSpinner" />
+
+    <EditText
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="Описание формулы"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaClassesSpinner" />
+
+    <Button
+        android:id="@+id/saveFormulasDataToDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/teal_200"
+        android:text="Сохранить в БД"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saveFormulasDataToDB">
+
+        <com.taeim.mathdisplay.AndroidMathView
+            android:id="@+id/sqrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foregroundTint="#009688"
+            android:textAlignment="center"
+            app:autoSize="true"
+            app:fontColor="@color/black"
+            app:fontSize="?attr/dialogPreferredPadding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.taeim.mathdisplay.AndroidMathView
+            android:id="@+id/sqrtPow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foregroundTint="#009688"
+            android:textAlignment="center"
+            app:autoSize="true"
+            app:fontColor="@color/black"
+            app:fontSize="?attr/dialogPreferredPadding"
+            app:layout_constraintEnd_toEndOf="@+id/pow"
+            app:layout_constraintStart_toEndOf="@+id/sqrt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.taeim.mathdisplay.AndroidMathView
+            android:id="@+id/pow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foregroundTint="#009688"
+            android:textAlignment="center"
+            app:autoSize="true"
+            app:fontColor="@color/black"
+            app:fontSize="?attr/dialogPreferredPadding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.taeim.mathdisplay.AndroidMathView
+            android:id="@+id/log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foregroundTint="#009688"
+            android:textAlignment="center"
+            app:autoSize="true"
+            app:fontColor="@color/black"
+            app:fontSize="?attr/dialogPreferredPadding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sqrt" />
+
+        <com.taeim.mathdisplay.AndroidMathView
+            android:id="@+id/sin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foregroundTint="#009688"
+            android:textAlignment="center"
+            app:autoSize="true"
+            app:fontColor="@color/black"
+            app:fontSize="?attr/dialogPreferredPadding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/frac"
+            app:layout_constraintStart_toEndOf="@+id/log"
+            app:layout_constraintTop_toBottomOf="@+id/sqrtPow" />
+
+        <com.taeim.mathdisplay.AndroidMathView
+            android:id="@+id/frac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:foregroundTint="#009688"
+            android:textAlignment="center"
+            app:autoSize="true"
+            app:fontColor="@color/black"
+            app:fontSize="?attr/dialogPreferredPadding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pow" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

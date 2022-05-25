@@ -1,9 +1,7 @@
 package com.example.formulas.addformulas.mvvm.domain
 
-import com.example.formulas.database.dao.ClassesDao
-import com.example.formulas.database.model.ClassNumberEntity
-import com.example.formulas.util.fromClassesEntityListToClassesString
-import io.reactivex.Observable
+import com.example.formulas.data.database.dao.ClassesDao
+import com.example.formulas.extension.fromClassesEntityListToClassesString
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

@@ -5,7 +5,7 @@
     android:id="@+id/fragmentInfo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".showformulas.mvvm.presentation.ui.InfoFragment">
+    tools:context=".presentation.info.InfoFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/infoRecyclerView"

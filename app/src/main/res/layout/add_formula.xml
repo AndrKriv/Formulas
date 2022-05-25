@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundTint="@color/teal_200"
+    tools:context=".addformulas.mvvm.presentation.ui.AddFormulasFragment">
+
+    <EditText
+        android:id="@+id/formulaHighText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="(1)"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/formulaLowText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="(2)"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toStartOf="@+id/formulaSignText"
+        app:layout_constraintStart_toEndOf="@+id/formulaHighText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/formulaSignText"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:hint="(3)"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.taeim.mathdisplay.AndroidMathView
+        android:id="@+id/formulaMathViewFormula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:foregroundTint="#009688"
+        android:hint="Formula"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:autoSize="true"
+        app:fontColor="@color/black"
+        app:fontSize="?attr/dialogPreferredPadding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaLowText"
+        app:textAlignment="center" />
+
+    <com.taeim.mathdisplay.AndroidMathView
+        android:id="@+id/formulaMathViewElement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:foregroundTint="#009688"
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:autoSize="true"
+        app:fontColor="@color/black"
+        app:fontSize="?attr/dialogPreferredPadding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaMathViewFormula"
+        app:textAlignment="center" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/formulaSwitchAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:text="Use"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaMathViewElement" />
+
+
+    <Button
+        android:id="@+id/formulaAddFormulasDataToAnotherPartOfFormula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@color/teal_200"
+        android:text="Добавить"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaSwitchAdd" />
+
+    <Button
+        android:id="@+id/formulaCleanMathViewFormula"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@color/teal_200"
+        android:text="Очистить"
+        android:textColor="#5E35B1"
+        app:layout_constraintEnd_toStartOf="@+id/formulaSaveFormulasData"
+        app:layout_constraintStart_toEndOf="@+id/formulaAddFormulasDataToAnotherPartOfFormula"
+        app:layout_constraintTop_toBottomOf="@+id/formulaSwitchAdd" />
+
+    <Button
+        android:id="@+id/formulaSaveFormulasData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@color/teal_200"
+        android:text="Сохранить"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaSwitchAdd" />
+
+    <EditText
+        android:id="@+id/etNameOfFormula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:hint="Введите название формулы"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/methods" />
+
+    <Spinner
+        android:id="@+id/formulaThemesSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNameOfFormula"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/formulaClassesSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaThemesSpinner" />
+
+    <EditText
+        android:id="@+id/note"
+        android:hint="Описание формулы"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/formulaClassesSpinner" />
+
+    <Button
+        android:id="@+id/saveFormulasDataToDB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:layout_margin="16dp"
+        android:text="Сохранить в БД"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/note" />
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/methods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/formulaCleanMathViewFormula"
+        app:singleSelection="true" >
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sqrt"
+            android:text="Sqrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/pow"
+            android:text="pow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/log"
+            android:text="log"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/frac"
+            android:text="frac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            />
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sqrtPow"
+            android:text="sqrtPow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/sin"
+            android:text="sin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cos"
+            android:text="cos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            />
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/questionsFAB"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/seashell"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:src="@drawable/question"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="@color/lime"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:translationZ="6dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
