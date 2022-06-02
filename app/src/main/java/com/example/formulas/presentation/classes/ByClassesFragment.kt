@@ -16,6 +16,7 @@ import com.example.formulas.extension.fromStringToStartUIModelList
 import com.example.formulas.extension.viewBinding
 import com.example.formulas.presentation.info.InfoFragment
 import com.example.formulas.presentation.classes.adapter.ClassAdapter
+import com.example.formulas.presentation.start.StartFragment
 
 class ByClassesFragment : BaseFragment(R.layout.fragment_class), OnIntItemClick {
     private val binding: FragmentClassBinding by viewBinding(FragmentClassBinding::bind)
@@ -41,6 +42,9 @@ class ByClassesFragment : BaseFragment(R.layout.fragment_class), OnIntItemClick 
                 DividerItemDecoration.VERTICAL
             )
         )
+        binding.classBackBtn.setOnClickListener {
+            this@ByClassesFragment.changeFragment(StartFragment())
+        }
     }
 
     override fun onElementClickListener(classNumb: Int) {

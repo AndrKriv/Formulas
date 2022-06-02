@@ -10,8 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge">
+
         <activity
-            android:name=".app.MainActivity"
+            android:name=".app.SplashScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".addformulas.mvvm.presentation.AddActivity"
-            android:exported="false" />
+            android:name=".app.MainActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

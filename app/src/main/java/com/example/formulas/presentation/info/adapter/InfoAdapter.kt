@@ -2,10 +2,12 @@ package com.example.formulas.presentation.info.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.formulas.databinding.InfoItemBinding
 import com.example.formulas.presentation.info.model.InfoUIModel
+import com.taeim.mathdisplay.AndroidMathView
 
 class InfoViewHolder(
     private val binding: InfoItemBinding
@@ -16,7 +18,12 @@ class InfoViewHolder(
         with(binding) {
             infoItemNameOfFormula.text = item.nameOfFormula
             infoItemFormula.latex = item.formula
-            infoItemNoteOfFormula.text = item.note
+            if(item.note == ""){
+                infoItemNoteOfFormula.visibility = View.GONE
+            }
+            else{
+                infoItemNoteOfFormula.text = item.note
+            }
         }
     }
 }

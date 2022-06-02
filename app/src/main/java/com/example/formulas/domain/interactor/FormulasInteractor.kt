@@ -1,7 +1,6 @@
 package com.example.formulas.domain.interactor
 
 import com.example.formulas.data.database.dao.FormulasDao
-import com.example.formulas.data.database.dao.ThemesDao
 import com.example.formulas.data.database.model.FormulasEntity
 import com.example.formulas.extension.fromEntityToInfoModelList
 import com.example.formulas.extension.fromThemesEntityListToStringList
@@ -11,10 +10,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-class FormulasInteractor @Inject constructor(
-    private val formulasDao: FormulasDao,
-    private val themesDao: ThemesDao
-) {
+class FormulasInteractor @Inject constructor(private val formulasDao: FormulasDao) {
     fun getFormulasByClass(classNumb: Int): Single<List<InfoUIModel>> =
         formulasDao
             .getFormulasByClass(classNumb)
@@ -38,10 +34,11 @@ class FormulasInteractor @Inject constructor(
             .observeOn(AndroidSchedulers.mainThread())
 
     fun getThemes(): Single<List<String>> =
-        themesDao
+        formulasDao
             .getThemes()
             .map { themeEntityList ->
                 themeEntityList.fromThemesEntityListToStringList()
+                themeEntityList.fromThemesEntityListToStringList().sortedBy { it }
             }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
