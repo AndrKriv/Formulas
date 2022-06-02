@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.example.formulas.data.database.model.FormulasEntity
+import com.example.formulas.data.database.model.ThemesEntity
 import io.reactivex.Single
 
 @Dao
@@ -18,6 +19,9 @@ interface FormulasDao {
 
     @Query("SELECT * FROM formulas_table where theme = :theme")
     fun getFormulasByTheme(theme: String): Single<List<FormulasEntity>>
+
+    @Query("SELECT DISTINCT theme FROM formulas_table")
+    fun getThemes(): Single<List<ThemesEntity>>
 
     @Query("DELETE FROM formulas_table where formulas_name = :formulasName")
     suspend fun removeFormula(formulasName: String)

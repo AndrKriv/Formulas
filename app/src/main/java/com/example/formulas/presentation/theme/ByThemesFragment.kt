@@ -3,6 +3,7 @@ package com.example.formulas.presentation.theme
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
@@ -13,8 +14,7 @@ import com.example.formulas.core.BaseFragment
 import com.example.formulas.databinding.FragmentThemeBinding
 import com.example.formulas.extension.*
 import com.example.formulas.presentation.info.InfoFragment
-import com.example.formulas.presentation.info.InfoViewModel
-import com.example.formulas.presentation.info.adapter.InfoAdapter
+import com.example.formulas.presentation.start.StartFragment
 import com.example.formulas.presentation.theme.adapter.ThemesAdapter
 
 class ByThemesFragment : BaseFragment(R.layout.fragment_theme), OnStringItemClick {
@@ -46,6 +46,16 @@ class ByThemesFragment : BaseFragment(R.layout.fragment_theme), OnStringItemClic
                 DividerItemDecoration.VERTICAL
             )
         )
+        themeViewModel.errorLiveData.observe(viewLifecycleOwner) {
+            Toast.makeText(
+                requireContext(),
+                "Никаких тем пока нет",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        binding.themeBackBtn.setOnClickListener {
+            this@ByThemesFragment.changeFragment(StartFragment())
+        }
     }
 
     override fun onElementClickListener(theme: String) {

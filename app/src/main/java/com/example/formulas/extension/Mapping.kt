@@ -12,7 +12,7 @@ fun FormulasEntity.toFormulasUIModel(): InfoUIModel =
         nameOfFormula = nameOfFormula,
         formula = formula,
         theme = themeOfFormulas,
-        note = "Примечание: $noteOfFormula"
+        note = noteOfFormula
     )
 
 fun ThemesEntity.themeToString(): String = this.theme
@@ -38,7 +38,7 @@ fun List<ThemesEntity>.fromThemesEntityListToThemesString(): String {
 
 fun List<ThemesEntity>.fromThemesEntityListToStringList(): List<String> {
 
-    var stringList = mutableListOf<String>()
+    val stringList = mutableListOf<String>()
 
     for (value in this) {
         stringList.add(value.themeToString())
