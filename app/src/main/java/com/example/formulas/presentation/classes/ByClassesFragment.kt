@@ -5,18 +5,16 @@ import android.util.Log
 import android.view.View
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.formulas.R
 import com.example.formulas.app.App
 import com.example.formulas.core.BaseFragment
 import com.example.formulas.databinding.FragmentClassBinding
 import com.example.formulas.extension.OnIntItemClick
-import com.example.formulas.extension.changeFragment
 import com.example.formulas.extension.fromStringToStartUIModelList
 import com.example.formulas.extension.viewBinding
-import com.example.formulas.presentation.info.InfoFragment
 import com.example.formulas.presentation.classes.adapter.ClassAdapter
-import com.example.formulas.presentation.start.StartFragment
 
 class ByClassesFragment : BaseFragment(R.layout.fragment_class), OnIntItemClick {
     private val binding: FragmentClassBinding by viewBinding(FragmentClassBinding::bind)
@@ -43,7 +41,7 @@ class ByClassesFragment : BaseFragment(R.layout.fragment_class), OnIntItemClick 
             )
         )
         binding.classBackBtn.setOnClickListener {
-            this@ByClassesFragment.changeFragment(StartFragment())
+            findNavController().navigate(R.id.action_navigationClass_to_navigationStart)
         }
     }
 
@@ -52,10 +50,8 @@ class ByClassesFragment : BaseFragment(R.layout.fragment_class), OnIntItemClick 
         Log.e("AAA", classNumber.toString())
         setFragmentResult(
             "requestKey2",
-            bundleOf(
-                "key" to classNumber
-            )
+            bundleOf("class_key" to classNumber)
         )
-        this@ByClassesFragment.changeFragment(InfoFragment())
+        findNavController().navigate(R.id.action_navigationClass_to_navigationInfo)
     }
 }
