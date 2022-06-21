@@ -17,4 +17,13 @@
         <item name="android:gravity">center</item>
         <item name="android:color">@color/black</item>
     </style>
+
+    <style name="MyTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#00FF00</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+    <style name="fon">
+        <item name="android:background">@drawable/fon1</item>
+    </style>
 </resources>

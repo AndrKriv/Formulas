@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Формулы</string>
+    <string name="app_name">Математические формулы</string>
     <string name="btn_find">Find</string>
     <string name="et_enter_name_of_form">Введите название формулы</string>
-    <string name="btn_back">В главное меню</string>
+    <string name="btn_back">Назад</string>
+    <string name="back_to_lobby">В главное меню</string>
     <string-array name="classes">
         <item>5-ый класс</item>
         <item>6-ой класс</item>
@@ -26,5 +27,11 @@
     <string name="formula_name">Введите название формулы</string>
     <string name="enter_formula">Введите формулу</string>
     <string name="enterclassnumber">Введите номер класса</string>
+    <string name="formula">Formula</string>
+    <string name="theme">Theme</string>
+    <string name="by_themes">По темам</string>
+    <string name="by_classes">По классам</string>
+    <string name="start_text">В этом приложении Вы найдете все алгебраические формулы школьного курса,
+        распределённые по темам и классам</string>
 
 </resources>

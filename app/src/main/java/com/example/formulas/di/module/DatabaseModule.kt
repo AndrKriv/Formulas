@@ -1,12 +1,12 @@
 package com.example.formulas.di.module
 
-import android.app.Application
+import android.content.Context
 import androidx.room.Room
-import com.example.formulas.database.dao.ClassesDao
-import com.example.formulas.database.dao.FormulasDao
-import com.example.formulas.database.dao.ThemesDao
-import com.example.formulas.database.db.FormulasDatabase
-import com.example.formulas.showformulas.util.Constants
+import com.example.formulas.core.Constants
+import com.example.formulas.data.database.FormulasDatabase
+import com.example.formulas.data.database.dao.ClassesDao
+import com.example.formulas.data.database.dao.FormulasDao
+import com.example.formulas.data.database.dao.ThemesDao
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -31,13 +31,13 @@ class DatabaseModule {
 
     @Singleton
     @Provides
-    fun providesDatabase(application: Application): FormulasDatabase =
+    fun providesDatabase(context: Context): FormulasDatabase =
         Room
             .databaseBuilder(
-                application.applicationContext,
+                context.applicationContext,
                 FormulasDatabase::class.java,
                 Constants.DATABASE_NAME
             )
-            //.createFromAssets()
+            .createFromAsset("formulas.db")
             .build()
 }
