@@ -7,14 +7,14 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.formulas.R
 import com.example.formulas.app.App
 import com.example.formulas.core.BaseFragment
 import com.example.formulas.databinding.FragmentThemeBinding
-import com.example.formulas.extension.*
-import com.example.formulas.presentation.info.InfoFragment
-import com.example.formulas.presentation.start.StartFragment
+import com.example.formulas.extension.OnStringItemClick
+import com.example.formulas.extension.viewBinding
 import com.example.formulas.presentation.theme.adapter.ThemesAdapter
 
 class ByThemesFragment : BaseFragment(R.layout.fragment_theme), OnStringItemClick {
@@ -54,7 +54,7 @@ class ByThemesFragment : BaseFragment(R.layout.fragment_theme), OnStringItemClic
             ).show()
         }
         binding.themeBackBtn.setOnClickListener {
-            this@ByThemesFragment.changeFragment(StartFragment())
+            findNavController().navigate(R.id.action_navigationTheme_to_navigationStart)
         }
     }
 
@@ -62,11 +62,9 @@ class ByThemesFragment : BaseFragment(R.layout.fragment_theme), OnStringItemClic
         Log.e("AAA", theme)
         setFragmentResult(
             "requestKey",
-            bundleOf(
-                "theme_key" to theme
-            )
+            bundleOf("theme_key" to theme)
         )
-        this@ByThemesFragment.changeFragment(InfoFragment())
+        findNavController().navigate(R.id.action_navigationTheme_to_navigationInfo)
     }
 
     override fun onStart() {

@@ -1,32 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:id="@+id/nav_graph"
-app:startDestination="@+id/navigationStart">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/navigationStart">
 
     <fragment
         android:id="@+id/navigationStart"
         android:name="com.example.formulas.presentation.start.StartFragment"
-        android:label="Страница формул"
-        tools:layout="@layout/fragment_start">
+        android:label="Start"
+        tools:layout="@layout/fragment_start" >
         <action
-            android:id="@+id/action_navigationStart_to_passwordFromStartToAdd"
-            app:destination="@id/passwordFromStartToAdd" />
+            android:id="@+id/action_navigationStart_to_navigationClass"
+            app:destination="@id/navigationClass"
+            app:popUpTo="@id/navigationStart" />
+        <action
+            android:id="@+id/action_navigationStart_to_navigationTheme"
+            app:destination="@id/navigationTheme"
+            app:popUpTo="@id/navigationStart" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationClass"
+        android:name="com.example.formulas.presentation.classes.ByClassesFragment"
+        android:label="Class"
+        tools:layout="@layout/fragment_class" >
+        <action
+            android:id="@+id/action_navigationClass_to_navigationInfo"
+            app:destination="@id/navigationInfo"
+            app:popUpTo="@id/navigationClass" />
+        <action
+            android:id="@+id/action_navigationClass_to_navigationStart"
+            app:destination="@id/navigationStart"
+            app:popUpTo="@id/navigationStart" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationTheme"
+        android:name="com.example.formulas.presentation.theme.ByThemesFragment"
+        android:label="Theme"
+        tools:layout="@layout/fragment_theme" >
+        <action
+            android:id="@+id/action_navigationTheme_to_navigationInfo"
+            app:destination="@id/navigationInfo"
+            app:popUpTo="@id/navigationTheme" />
+        <action
+            android:id="@+id/action_navigationTheme_to_navigationStart"
+            app:destination="@id/navigationStart"
+            app:popUpTo="@id/navigationStart" />
     </fragment>
 
     <fragment
         android:id="@+id/navigationInfo"
         android:name="com.example.formulas.presentation.info.InfoFragment"
-        android:label="Запуск"
-        tools:layout="@layout/fragment_info"
-        />
-
-    <fragment
-        android:id="@+id/passwordFromStartToAdd"
-        android:name="com.example.formulas.presentation.password.PasswordFragment"
-        android:label="Запуск"
-        tools:layout="@layout/fragment_info"
-        />
+        android:label="Info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_navigationInfo_to_navigationTheme"
+            app:destination="@id/navigationTheme"
+            app:popUpTo="@id/navigationTheme" />
+        <action
+            android:id="@+id/action_navigationInfo_to_navigationClass"
+            app:destination="@id/navigationClass"
+            app:popUpTo="@id/navigationClass" />
+    </fragment>
 
 </navigation>

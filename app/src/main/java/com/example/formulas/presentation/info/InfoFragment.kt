@@ -6,15 +6,14 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.formulas.R
 import com.example.formulas.app.App
 import com.example.formulas.core.BaseFragment
 import com.example.formulas.databinding.FragmentInfoBinding
-import com.example.formulas.extension.changeFragment
 import com.example.formulas.extension.viewBinding
 import com.example.formulas.presentation.info.adapter.InfoAdapter
-import com.example.formulas.presentation.start.StartFragment
 
 class InfoFragment : BaseFragment(R.layout.fragment_info) {
 
@@ -28,7 +27,7 @@ class InfoFragment : BaseFragment(R.layout.fragment_info) {
             .appComponent
             .inject(this)
         setFragmentResultListener("requestKey2") { _, bundle ->
-            val res = bundle.getInt("key")
+            val res = bundle.getInt("class_key")
             infoViewModel.getFormulasByClass(res)
             Log.d("AAA", res.toString())
         }
@@ -49,7 +48,7 @@ class InfoFragment : BaseFragment(R.layout.fragment_info) {
             infoAdapter.setItems(it)
         }
         binding.infoBackBtn.setOnClickListener {
-            this@InfoFragment.changeFragment(StartFragment())
+            findNavController().popBackStack()
         }
         infoViewModel.errorLiveData.observe(viewLifecycleOwner) {
             Toast.makeText(
