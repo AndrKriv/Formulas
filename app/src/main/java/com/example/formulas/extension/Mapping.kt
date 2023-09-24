@@ -11,7 +11,8 @@ fun FormulasEntity.toFormulasUIModel(): InfoUIModel =
         nameOfFormula = nameOfFormula,
         formula = formula,
         theme = themeOfFormulas,
-        note = noteOfFormula
+        note = noteOfFormula,
+        contentDescription = contentDescription ?: ""
     )
 
 fun ThemesEntity.themeToString(): String = this.theme

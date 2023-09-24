@@ -17,5 +17,7 @@ data class FormulasEntity(
     @ColumnInfo(name = "theme")
     val themeOfFormulas: String,
     @ColumnInfo(name = "note")
-    val noteOfFormula: String
+    val noteOfFormula: String,
+    @ColumnInfo(name = "content_description")
+    val contentDescription: String?,
 )
