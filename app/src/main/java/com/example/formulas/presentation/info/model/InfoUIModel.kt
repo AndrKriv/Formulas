@@ -5,5 +5,6 @@ data class InfoUIModel(
     val nameOfFormula: String,
     val formula: String,
     val theme: String,
-    val note: String
+    val note: String,
+    val contentDescription: String,
 )

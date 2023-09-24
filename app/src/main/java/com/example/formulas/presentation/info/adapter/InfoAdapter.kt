@@ -16,9 +16,10 @@ class InfoViewHolder(
 
     fun bindView(item: InfoUIModel) {
         with(binding) {
+            textId.contentDescription = item.contentDescription
             infoItemNameOfFormula.text = item.nameOfFormula
             infoItemFormula.latex = item.formula
-            if(item.note == ""){
+            if(item.note.isEmpty()){
                 infoItemNoteOfFormula.visibility = View.GONE
             }
             else{
